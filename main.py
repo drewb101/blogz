@@ -17,7 +17,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(120), unique=True)
     password = db.Column(db.String(120))
-    blogs = db.relationship('Blog', backref='User')
+    blogs = db.relationship('Blog', backref='owner')
 
     def __init__(self, username, password):
         self.username = username
@@ -37,6 +37,12 @@ class Blog(db.Model):
         self.body = body
         self.user = user
         self.created = datetime.now()
+
+    def is_valid(self):
+        if self.title and self.body and self.created:
+            return True
+        else:
+            return False
 
 
 @app.before_request

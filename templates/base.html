@@ -1,35 +1,43 @@
-<!doctype html>
-<html>
-    <head>
-        <h1
-        <title>{{title}}</title>
-        <link rel="stylesheet" href="static/css/normalize.css">
-        <link rel="stylesheet" href="static/css/styles.css">
-    </head>
-    <body>
-        <nav>
-            <ul id="user-account">
-                <li><a href="/login">login</a></li>
-                <li><a href="/logout">logout</a></li>
-            </ul>
-            <ul>
-                <li><a href="/">home</a></li>
-                <li><a href="/blog">all posts</a></li>
-                <li><a href="/blog/newpost">new post</a></li>
-            </ul>
-        </nav>
-    
-        <main>
-            <div class="container">
-                {% with messages = get_flashed_messages() %}
-                    {% for message in messages %}
-                        <div class="flash_message">{{message|safe}}</div>
-                        {% endfor %}
-                    {% endwith %}
+<!doctype html><html><head><h1 <title> {
+            {
+            title
+            }
+            }
 
-                    {% block content %}
-                    {% endblock %}
-            </div>
-        </main>
-    </body>
-</html>
+        </title><link rel="stylesheet" href="static/css/normalize.css"><link
+            rel="stylesheet" href="static/css/styles.css"></head><body><nav><ul
+                id="user-account"><li><a href="/login">login</a></li><li><a
+                        href="/logout">logout</a></li></ul><ul><li><a href="/">home</a></li><li><a
+                        href="/blog">all posts</a></li><li><a
+                        href="/blog/newpost">new post</a></li></ul></nav><main><div
+                class="container"> {
+                % with messages=get_flashed_messages() %
+                }
+
+                {
+                % for message in messages %
+                }
+
+                <div class="flash_message"> {
+                    {
+                    message|safe
+                    }
+                    }
+
+                </div> {
+                % endfor %
+                }
+
+                {
+                % endwith %
+                }
+
+                {
+                % block content %
+                }
+
+                {
+                % endblock %
+                }
+
+            </div></main></body></html>>

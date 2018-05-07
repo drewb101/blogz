@@ -1,139 +1,139 @@
 body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 100%;
 }
 
 .error {
-    color: red;
+  color: red;
 }
 
 label {
-    display: block;
-    font-size: 20px;
+  display: block;
+  font-size: 20px;
 }
 
 input[type="text"],
 input[type="password"] {
-    width: 400px;
-    font-size: 20px;
-    padding: 2px;
+  width: 400px;
+  font-size: 20px;
+  padding: 2px;
 }
 
 textarea {
-    width: 400px;
-    height: 200px;
-    font-size: 17px;
-    font-family: monospace;
-    display: block;
-    margin: 1rem;
+  width: 400px;
+  height: 200px;
+  font-size: 17px;
+  font-family: monospace;
+  display: block;
+  margin: 1rem;
 }
 
 hr {
-    margin: 20px auto;
+  margin: 20px auto;
 }
 
-.post+.post {
-    margin-top: 20px;
+.post + .post {
+  margin-top: 20px;
 }
 
 .post-title {
-    font-weight: bold;
-    font-size: 20px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .post-body {
-    margin: 0;
-    font-size: 17px;
+  margin: 0;
+  font-size: 17px;
 }
 
 .post-author {
-    font-style: italic;
-    font-size: 12px;
+  font-style: italic;
+  font-size: 12px;
 }
 
 nav ul {
-    padding: 0;
-    display: inline-block;
+  padding: 0;
+  /*display: inline-block;*/
 }
 
 nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-right: 15px;
+  list-style: none;
+  /*display: inline-block;*/
+  margin-right: 15px;
 }
 
 nav #user-account {
-    float: right;
+  float: right;
 }
 
 nav a {
-    background-color: lightgreen;
-    border-radius: 2px;
-    border: none;
-    color: darkgreen;
-    cursor: pointer;
-    display: block;
-    font-size: 85%;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
+  background-color: lightgreen;
+  border-radius: 2px;
+  border: none;
+  color: darkgreen;
+  cursor: pointer;
+  display: block;
+  font-size: 85%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 
 nav a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 nav a:hover {
-    background: lightblue;
-    box-shadow: 0px 5px 5px #777;
-    left: -3px;
-    position: relative;
-    top: -3px;
+  background: lightblue;
+  box-shadow: 0px 5px 5px #777;
+  left: -3px;
+  position: relative;
+  top: -3px;
 }
 
 main {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .container {
-    margin-left: 3rem;
+  margin-left: 3rem;
 }
 
 input {
-    display: block;
-    font-size: 100%;
-    margin: 1rem;
+  display: block;
+  font-size: 100%;
+  margin: 1rem;
 }
 
 input[type="submit"] {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 #submit_button {
-    background-color: lightgreen;
-    border-radius: 2px;
-    border: none;
-    color: darkgreen;
-    cursor: pointer;
-    padding: 0.5em;
+  background-color: lightgreen;
+  border-radius: 2px;
+  border: none;
+  color: darkgreen;
+  cursor: pointer;
+  padding: 0.5em;
 }
 
 #submit_button:hover {
-    background: lightblue;
-    box-shadow: 0px 5px 5px #777;
-    left: -3px;
-    position: relative;
-    top: -3px;
+  background: lightblue;
+  box-shadow: 0px 5px 5px #777;
+  left: -3px;
+  position: relative;
+  top: -3px;
 }
 
 .flash_message {
-    background-color: MistyRose;
-    border-radius: 2px;
-    color: red;
-    margin: 0.25rem;
-    padding: 2rem;
+  background-color: MistyRose;
+  border-radius: 2px;
+  color: red;
+  margin: 0.25rem;
+  padding: 2rem;
 }
 
 #date {
-    font-size: 50%;
+  font-size: 50%;
 }
