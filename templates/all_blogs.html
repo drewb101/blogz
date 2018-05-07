@@ -1,15 +1,15 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <h1>All Blog Posts</h1>
-    <ul>
-        {% for blog in all_blogs %}
-        <li>
-            <h2><a href="/blog?id={{ blog.id }}">{{ blog.title }}</a></h2>
-            <p>{{ blog.body }}</p>
-            <p id="date">{{ blog.created }}</p>
-        </li>
-        {% endfor %}
-    </ul>
-{% endblock %}
+<ul>
+    {% for blog in all_blogs %}
+    <li>
+        <h2>
+            <a href="/blog?id={{ blog.id }}">{{ blog.title }}</a>
+        </h2>
+        <p>{{ blog.body }}</p>
+        <p id="date">{{ blog.created }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}}}

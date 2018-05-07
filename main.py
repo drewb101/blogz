@@ -39,7 +39,7 @@ class Blog(db.Model):
         self.created = datetime.now()
 
     def is_valid(self):
-        if self.title and self.body and self.created:
+        if self.title and self.body and self.user and self.created:
             return True
         else:
             return False
@@ -47,7 +47,8 @@ class Blog(db.Model):
 
 @app.before_request
 def require_login():
-    allowed_routes = ['login', 'list_blogs', 'index', 'signup']
+    allowed_routes = ['index', 'static',
+                      'login', 'list_blogs', 'index', 'signup']
     if request.endpoint not in allowed_routes and 'username' not in session:
         return redirect('/login')
 
@@ -78,7 +79,7 @@ def login():
             flash("Invalid password")
             return render_template('login.html')
         if not user:
-            flash("User does not exist.")
+            flash("THat login does not exist.")
             return render_template('login.html')
 
     else:
@@ -87,20 +88,23 @@ def login():
 
 @app.route("/")
 def index():
-    return redirect("/blog")
+    users = User.query.all()
+    return render_template("/index.html", users=users)
 
 
 @app.route("/blog", methods=['POST', 'GET'])
-def display_all_blogs():
+def all_blogs():
     blog_id = request.args.get('id')
-    author_id = request.args.get('user_id')
-    all_blogs = Blog.query.all()
-    if (blog_id):
-        blog = Blog.query.get(blog_id)
+    user_id = request.args.get('user_id')
+    blogs = Blog.query.order_by(Blog.created.desc())
+
+    if blog_id:
+        blog = Blog.query.filter_by(id=blog_id).first()
         return render_template('single_blog.html', title="Blog",
                                blog=blog)
-    if (author_id):
-        author_blog = Blog.query.filter_by(user_id=author_id)
+
+    if (user_id):
+        user_blog = Blog.query.filter_by(user_id=author_id)
         return render_template('single_blog.html', blogs=author_blog)
 
     return render_template('all_blogs.html', title="All Blog Posts",

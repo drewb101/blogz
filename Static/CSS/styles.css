@@ -9,46 +9,46 @@ body {
 
 label {
   display: block;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
-input[type="text"],
+/* input[type="text"],
 input[type="password"] {
-  width: 400px;
-  font-size: 20px;
-  padding: 2px;
-}
+    width: 25rem;
+    font-size: 1.25rem;
+    padding: .125rem;
+} */
 
 textarea {
-  width: 400px;
-  height: 200px;
-  font-size: 17px;
+  width: 25rem;
+  height: 12.5rem;
+  font-size: 1.0625rem;
   font-family: monospace;
   display: block;
   margin: 1rem;
 }
 
 hr {
-  margin: 20px auto;
+  margin: 1.25rem auto;
 }
 
-.post + .post {
-  margin-top: 20px;
+.blog + .blog {
+  margin-top: 1.25rem;
 }
 
-.post-title {
+.blog-title {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
-.post-body {
+.blog-body {
   margin: 0;
-  font-size: 17px;
+  font-size: 1.0625rem;
 }
 
-.post-author {
+.blog-author {
   font-style: italic;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 nav ul {
@@ -59,7 +59,7 @@ nav ul {
 nav ul li {
   list-style: none;
   /*display: inline-block;*/
-  margin-right: 15px;
+  margin-right: 0.9375rem;
 }
 
 nav #user-account {
@@ -68,7 +68,7 @@ nav #user-account {
 
 nav a {
   background-color: lightgreen;
-  border-radius: 2px;
+  border-radius: 0.125rem;
   border: none;
   color: darkgreen;
   cursor: pointer;
@@ -84,10 +84,10 @@ nav a {
 
 nav a:hover {
   background: lightblue;
-  box-shadow: 0px 5px 5px #777;
-  left: -3px;
+  box-shadow: 0rem 0.3125rem 0.3125rem #777;
+  left: -0.1875rem;
   position: relative;
-  top: -3px;
+  top: -0.1875rem;
 }
 
 main {
@@ -105,13 +105,13 @@ input {
   margin: 1rem;
 }
 
-input[type="submit"] {
-  font-size: 24px;
-}
+/*input[type="submit"] {
+  font-size: 1.5rem;
+}*/
 
 #submit_button {
   background-color: lightgreen;
-  border-radius: 2px;
+  border-radius: 0.125rem;
   border: none;
   color: darkgreen;
   cursor: pointer;
@@ -120,15 +120,15 @@ input[type="submit"] {
 
 #submit_button:hover {
   background: lightblue;
-  box-shadow: 0px 5px 5px #777;
-  left: -3px;
+  box-shadow: 0rem 0.3125rem 0.3125rem #777;
+  left: -0.1875rem;
   position: relative;
-  top: -3px;
+  top: -0.1875rem;
 }
 
 .flash_message {
   background-color: MistyRose;
-  border-radius: 2px;
+  border-radius: 0.125rem;
   color: red;
   margin: 0.25rem;
   padding: 2rem;
