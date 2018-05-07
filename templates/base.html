@@ -1,20 +1,26 @@
 <!doctype html>
 <html>
     <head>
+        <h1
         <title>{{title}}</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+        <link rel="stylesheet" href="static/css/normalize.css">
+        <link rel="stylesheet" href="static/css/styles.css">
     </head>
     <body>
-        <!-- main element is a flexbox  -->
+        <nav>
+            <ul id="user-account">
+                <li><a href="/login">login</a></li>
+                <li><a href="/logout">logout</a></li>
+            </ul>
+            <ul>
+                <li><a href="/">home</a></li>
+                <li><a href="/blog">all posts</a></li>
+                <li><a href="/blog/newpost">new post</a></li>
+            </ul>
+        </nav>
+    
         <main>
-            <nav>
-                <a href='/blog'>Main Blog Page<br />(oldest-first)</a>
-                <a href='/blog?sort=newest'>List all blogs<br />(newest-first)</a>
-                <a href='/newpost'>Add a Blog Entry</a>
-            </nav>
-
             <div class="container">
-                <!-- No message categories  -->
                 {% with messages = get_flashed_messages() %}
                     {% for message in messages %}
                         <div class="flash_message">{{message|safe}}</div>
@@ -23,10 +29,7 @@
 
                     {% block content %}
                     {% endblock %}
-
             </div>
-            <!-- .container -->
         </main>
-
     </body>
 </html>
